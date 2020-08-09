@@ -1,0 +1,113 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+}
+
+.landing{
+    height: 100vh;
+    background: url("/image/nat-4.jpg") no-repeat center center/cover;
+    position: relative;
+}
+
+.overlay{
+    background-image: linear-gradient(hsla(0, 0%, 0%, 0.432),rgba(0, 0, 0, 0.418));
+    height: 100vh;
+    clip-path: polygon(50% 20%,50% 20%,80% 80%,20% 80%);
+    animation: fadeIn 2s ease-in;
+}
+
+.content-box{
+    letter-spacing: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.onsen-logo{
+    height: 15vh;
+    animation: moveInUpDown 2s ease-out;
+    animation-fill-mode: backwards;
+}
+
+.onsen-logo:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+
+.text-main{
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 2;
+    animation: moveInUp 2s ease-out;
+}
+
+.text-sub{
+    font-weight: 400;
+    display: block;
+    animation: moveInUp 2s ease-out;
+}
+
+.btn.btn-white{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20%;
+    padding: 15px 20px;
+    background-color: black;
+    color: white;
+    animation: fadeIn 2s ease-in;
+    animation-fill-mode: backwards;
+    backface-visibility: hidden;
+}
+
+.btn:hover{
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    transition: all 0.5s;
+}
+
+.btn:active{
+    transform: translateY(5px);
+    box-shadow: 0 2px 10px  rgba(255, 255, 255, 0.2);
+}
+
+@keyframes moveInUp{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes moveInUpDown{
+
+    0%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
